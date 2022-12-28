@@ -21,7 +21,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  box-shadow: 0 20px 4px rgba(30, 60, 90, 0.1);
+  box-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
 }
 
 .logo {
