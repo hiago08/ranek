@@ -55,7 +55,7 @@ export default new Vuex.Store({
         cidade: "",
         estado: "",
       });
-      context.commit("UPDATE_LOGIN", {login: false})
+      context.commit("UPDATE_LOGIN", false)
     }
   },
   modules: {
