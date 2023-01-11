@@ -17,7 +17,7 @@
           >
         </li>
         <li>
-          <button @click.prevent="deslogar" to="/">Deslogar</button>
+          <button @click.prevent="deslogar">Deslogar</button>
         </li>
       </ul>
     </nav>
