@@ -5,6 +5,7 @@
         Atualizar Usuário
       </button>
     </UsuarioForm>
+    <ErroNotificacao :erros="erros" />
   </section>
 </template>
 
@@ -16,8 +17,14 @@ export default {
   components: {
     UsuarioForm,
   },
+  data() {
+    return {
+      erros: [],
+    };
+  },
   methods: {
     atualizarUsuario() {
+      this.erros = [];
       api
         .put(`/usuario`, this.$store.state.usuario)
         .then(() => {
@@ -25,7 +32,7 @@ export default {
           this.$router.push({ name: "usuario" });
         })
         .catch((error) => {
-          console.log(error.response);
+          this.erros.push(error.response.data.message);
         });
     },
   },
